@@ -1,2 +1,3 @@
 Scrapy==1.4.0
 scrapy-splash==0.7.2
+selenium-3.4.3

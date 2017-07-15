@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../hungry/.idea/hungry.iml" filepath="$PROJECT_DIR$/../hungry/.idea/hungry.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/scrapy-tutorial.iml" filepath="$PROJECT_DIR$/.idea/scrapy-tutorial.iml" />
     </modules>
   </component>
