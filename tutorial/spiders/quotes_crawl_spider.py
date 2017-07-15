@@ -2,7 +2,7 @@
 import scrapy
 from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor
-
+from tutorial.items import Quote
 
 class QuotesSpider(CrawlSpider):
     name = "quotes_crawl"
@@ -15,16 +15,16 @@ class QuotesSpider(CrawlSpider):
         # Rule(LinkExtractor(allow=('category\.php', ), deny=('subsection\.php', ))),
 
         # Extract links matching 'item.php' and parse them with the spider's method parse_item
-        Rule(LinkExtractor(allow=('page', )),  callback='parse_quote'),
+        Rule(LinkExtractor(allow=('page', )),  callback='parse_page'),
     )
 
     def parse_page(self, response):
-        self.logger.info('Hi, this is an item page! %s', response.url)
-        items = []
-        for quote in response.css('div.quote'):
-            item = scrapy.item.Item()
-            item['text'] = quote.css('span.text::text').extract_first()
-            item['author'] = quote.css('span small::text').extract_first()
-            item['tags'] = quote.css('div.tags a.tag::text').extract()
-            items.append(item)
-        return items
+        self.logger.info('Hi, this is a page! %s', response.url)
+        quotes = []
+        for page_quote in response.css('div.quote'):
+            quote = Quote()
+            quote['text'] = page_quote.css('span.text::text').extract_first()
+            quote['author'] = page_quote.css('span small::text').extract_first()
+            quote['tags'] = page_quote.css('div.tags a.tag::text').extract()
+            quotes.append(quote)
+        return quotes
