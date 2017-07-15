@@ -22,3 +22,12 @@ class Quote(scrapy.Item):
     text = scrapy.Field()
     author = scrapy.Field()
     tags = scrapy.Field()
+
+
+class Recipe(scrapy.Item):
+    url = scrapy.Field()
+    description = scrapy.Field()
+    name = scrapy.Field()
+    reviews = scrapy.Field()
+    cooked_times = scrapy.Field()
+    ingredients = scrapy.Field()

@@ -5,6 +5,9 @@ from tutorial.items import Product
 
 from tutorial import helpers
 
+TOKEN = None
+PROXY = 'https://api.proxycrawl.com/?token={0}&url='.format(TOKEN)
+
 
 class AmazonSpider(CrawlSpider):
     name = 'amazon'
@@ -42,4 +45,10 @@ class AmazonSpider(CrawlSpider):
         product['url'] = response.url
         return product
 
-
+    def process_links(self, links):
+        for link in links:
+            if PROXY and TOKEN:
+                link.url = PROXY + urlencode({'url': link.url})
+            else:
+                link.url = "http://localhost:8050/render.html?" + urlencode({'url': link.url})
+        return links
