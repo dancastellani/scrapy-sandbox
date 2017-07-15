@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a79fcac1-8b75-4720-9b55-772d1b2f5e5a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tutorial/spiders/quotes_spider.py" afterPath="$PROJECT_DIR$/tutorial/spiders/quotes_spider.py" />
     </list>
     <ignored path="scrapy-tutorial.iws" />
     <ignored path=".idea/workspace.xml" />
