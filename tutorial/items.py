@@ -8,6 +8,16 @@
 import scrapy
 
 
+class Product(scrapy.Item):
+    url = scrapy.Field()
+    name = scrapy.Field()
+    description = scrapy.Field()
+    price = scrapy.Field()
+    shipping = scrapy.Field()
+    rating = scrapy.Field()
+    reviews = scrapy.Field()
+
+
 class Quote(scrapy.Item):
     text = scrapy.Field()
     author = scrapy.Field()
