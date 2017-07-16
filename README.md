@@ -6,6 +6,7 @@ Played to crawl with **Amazon.com** and **AllRecipes**, but got banned after a f
 
 TODO:
 * Discover how to avoid bot-blockers and crawl `tudogostoso.com.br`
+* Try `fake-user-agents` to not get blocked
 
 # How do I get set up? 
 
