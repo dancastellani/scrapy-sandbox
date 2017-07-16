@@ -2,7 +2,10 @@
 https://docs.scrapy.org/en/latest/intro/tutorial.html
 
 This is my scrapy sandbox. I followed the Scrapy tutorial and then tried other things.
- Played to crawl with **Amazon.com** and **AllRecipes**.
+Played to crawl with **Amazon.com** and **AllRecipes**, but got banned after a few runs.
+
+TODO:
+* Discover how to avoid bot-blockers and crawl `tudogostoso.com.br`
 
 # How do I get set up? 
 
